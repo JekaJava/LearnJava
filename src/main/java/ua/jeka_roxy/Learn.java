@@ -5,6 +5,8 @@ package ua.jeka_roxy;
  */
 public class Learn {
     public static void main(String[] args) {
-        System.out.println("hello");
+        /*создать матрицу х * х( размер указывает пользователь )
+        заполнить рандомными числами, но значение елементов по диагонале совпадает
+         */
     }
 }
