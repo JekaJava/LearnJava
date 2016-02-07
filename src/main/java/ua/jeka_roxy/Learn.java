@@ -27,7 +27,7 @@ public class Learn {
         for (int row = 0; row < rowSize; row++) {
             for (int column = 0; column < columnSize; column++) {
                 matrix[row][column] = random.nextInt(100);
-                System.out.print(matrix[row][column] + "\t");
+                System.out.print(matrix[row][column] + " ");
             }
             System.out.println(" ");
         }
