@@ -8,7 +8,7 @@ import java.util.Random;
 /**
  * Created by wojda on 07.02.2016.
  */
-public class Learn {
+public class Task_1 {
     public static void main(String[] args) throws IOException {
         int rowSize, columnSize;
         try {
@@ -16,9 +16,9 @@ public class Learn {
             columnSize = Integer.parseInt(args[1]);
         } catch (ArrayIndexOutOfBoundsException e) {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Input rowSize");
+            System.out.print("Input rowSize: ");
             rowSize = Integer.parseInt(reader.readLine());
-            System.out.println("Input columnSize");
+            System.out.print("Input columnSize: ");
             columnSize = Integer.parseInt(reader.readLine());
         }
         int matrix[][] = new int[rowSize][columnSize];
@@ -27,7 +27,7 @@ public class Learn {
         for (int row = 0; row < rowSize; row++) {
             for (int column = 0; column < columnSize; column++) {
                 matrix[row][column] = random.nextInt(100);
-                System.out.print(matrix[row][column] + "\t");
+                System.out.print(matrix[row][column] + " ");
             }
             System.out.println(" ");
         }
@@ -45,5 +45,17 @@ public class Learn {
 
 насчет диагонали - это елемент у которого совпадают значение  row и column, можно заменить на заданное число \ первое число которое выпадет из рандома
 
- сделай так, что - бы вывод был ровным ( табуляция )
+ сделай так, что - бы вывод был ровным
+
+
+ Пример
+ ввод:
+ 5
+ 5
+ вывод:
+0	14	8	38	49
+38	0	21	81	69
+90	25	0	24	2
+61	78	4	0	72
+20	29	26	44	0
 */
