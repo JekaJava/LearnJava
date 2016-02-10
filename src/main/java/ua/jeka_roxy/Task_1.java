@@ -11,26 +11,45 @@ import java.util.Random;
 public class Task_1 {
     public static void main(String[] args) throws IOException {
         int rowSize, columnSize;
-
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            System.out.print("Input rowSize: ");
-            rowSize = Integer.parseInt(reader.readLine());
-            System.out.print("Input columnSize: ");
-            columnSize = Integer.parseInt(reader.readLine());
-
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Input rowSize: ");
+        rowSize = Integer.parseInt(reader.readLine());
+        System.out.print("Input columnSize: ");
+        columnSize = Integer.parseInt(reader.readLine());
         int matrix[][] = new int[rowSize][columnSize];
+        printMatrix(matrix(inputMatrix(matrix),0));
+    }
 
+    public static int[][] inputMatrix ( int[][] a) {  //заполняем матрицу числами
         Random random = new Random();
-        for (int row = 0; row < rowSize; row++) {
-            for (int column = 0; column < columnSize; column++) {
-                matrix[row][column] = random.nextInt(100);
-                if (row == column)
-                    matrix[row][column] = 0;
-                System.out.print(matrix[row][column] + "\t"); //OR System.out.format("%3d ",matrix[row][column])
+        for (int i = 0; i < a.length ; i++) {
+            for (int j = 0; j < a.length ; j++) {
+                a[i][j] = random.nextInt(100);
+            }
+        }
+        return a;
+    }
+
+    public static int[][] matrix ( int [][] a, int c ) {  //меняем числа в диагонале на любое число
+        for (int i = 0; i < a.length ; i++) {
+            for (int j = 0; j < a.length ; j++) {
+                if ( j == i) {
+                    a[i][j] = c;
+                }
+            }
+        }
+        return a;
+    }
+
+    public static void printMatrix ( int [][] a) {   //вывод любой матрицы
+        for (int i = 0; i < a.length ; i++) {
+            for (int j = 0; j < a.length ; j++) {
+                System.out.print(a[i][j] + "\t"); //OR System.out.format("%3d ",matrix[row][column])
             }
             System.out.println(" ");
         }
     }
+
 }
 /*создать матрицу х * х( размер указывает пользователь ) заполнить рандомными числами, но значение елементов по диагонале совпадает
 
