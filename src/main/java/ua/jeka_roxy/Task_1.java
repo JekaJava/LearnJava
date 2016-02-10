@@ -11,23 +11,22 @@ import java.util.Random;
 public class Task_1 {
     public static void main(String[] args) throws IOException {
         int rowSize, columnSize;
-        try {
-             rowSize = Integer.parseInt(args[0]);
-            columnSize = Integer.parseInt(args[1]);
-        } catch (ArrayIndexOutOfBoundsException e) {
+
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             System.out.print("Input rowSize: ");
             rowSize = Integer.parseInt(reader.readLine());
             System.out.print("Input columnSize: ");
             columnSize = Integer.parseInt(reader.readLine());
-        }
+
         int matrix[][] = new int[rowSize][columnSize];
 
         Random random = new Random();
         for (int row = 0; row < rowSize; row++) {
             for (int column = 0; column < columnSize; column++) {
                 matrix[row][column] = random.nextInt(100);
-                System.out.print(matrix[row][column] + " ");
+                if (row == column)
+                    matrix[row][column] = 0;
+                System.out.print(matrix[row][column] + "\t"); //OR System.out.format("%3d ",matrix[row][column])
             }
             System.out.println(" ");
         }
