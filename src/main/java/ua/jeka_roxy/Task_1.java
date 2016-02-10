@@ -16,8 +16,14 @@ public class Task_1 {
         rowSize = Integer.parseInt(reader.readLine());
         System.out.print("Input columnSize: ");
         columnSize = Integer.parseInt(reader.readLine());
-        int matrix[][] = new int[rowSize][columnSize];
-        printMatrix(matrix(inputMatrix(matrix),0));
+        int mat[][] = new int[rowSize][columnSize];
+        printMatrix(matrix(inputMatrix(mat),0));
+        /*
+        or
+        inputMatrix(matrix);
+        matrix(mat,0);
+        printMatrix(mat)
+         */
     }
 
     public static int[][] inputMatrix ( int[][] a) {  //заполняем матрицу числами
