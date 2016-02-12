@@ -1,5 +1,6 @@
 package ua.jeka_roxy;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
@@ -23,27 +24,18 @@ public class Task_01 {
         }
 
         System.out.println("a1: ");
-        for (int b1 : a1 ) {
-            System.out.print(b1 + "\t");
-        }
+        System.out.println(Arrays.toString(a1));
         System.out.println("\na2: ");
-        for (int b1 : a2 ) {
-            System.out.print(b1 + "\t");
-        }
+        System.out.println(Arrays.toString(a2));
         System.out.println("\na3: ");
-        for (int b1 : a3 ) {
-            System.out.print(b1 + "\t");
-        }
+        System.out.println(Arrays.toString(a3));
         System.out.println("\na4: ");
-        for (int b1 : a4 ) {
-            System.out.print(b1 + "\t");
-        }
+        System.out.println(Arrays.toString(a4));
         System.out.println("\na5: ");
-        for (int b1 : a5 ) {
-            System.out.print(b1 + "\t");
-        }
+        System.out.println(Arrays.toString(a5));
+
         System.out.println("\nreverse output: ");
-        for (int i = a1.length; i > 0; i--) {         //тут ошибка, отсчет начинаеться с нуля, длина массива 10, а вот последний элемент 9, и также можно вывести 0 элемент
+        for (int i = a1.length - 1; i >= 0; i--) {         //тут ошибка, отсчет начинаеться с нуля, длина массива 10, а вот последний элемент 9, и также можно вывести 0 элемент
             System.out.print(a1[i] + "\t");
             //System.out.println(Arrays.toString(a1));
         }
