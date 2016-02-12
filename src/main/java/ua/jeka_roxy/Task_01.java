@@ -1,6 +1,5 @@
 package ua.jeka_roxy;
 
-import java.util.Arrays;
 
 /**
  * Created by wojda on 10.02.2016.
@@ -43,9 +42,8 @@ public class Task_01 {
             System.out.print(b1 + "\t");
         }
         System.out.println("\nreverse output: ");
-        for (int i = a1.length; i > 0; i--) {         //тут ошибка, отсчет начинаеться с нуля, длина массива 10, а вот последний элемент 9, и также можно вывести 0 элемент
+        for (int i = a1.length - 1; i >= 0; i--) { // int i = a1.length - 1; - нужно начать отсчет с последнего элемента, так как количество элементов 0-9, то все образно "сдвигается на 1"
             System.out.print(a1[i] + "\t");
-            //System.out.println(Arrays.toString(a1));
         }
     }
 }
