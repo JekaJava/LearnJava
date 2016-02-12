@@ -43,7 +43,7 @@ public class Task_01 {
             System.out.print(b1 + "\t");
         }
         System.out.println("\nreverse output: ");
-        for (int i = a1.length; i > 0; i--) {
+        for (int i = a1.length; i > 0; i--) {         //тут ошибка, отсчет начинаеться с нуля, длина массива 10, а вот последний элемент 9, и также можно вывести 0 элемент
             System.out.print(a1[i] + "\t");
             //System.out.println(Arrays.toString(a1));
         }
