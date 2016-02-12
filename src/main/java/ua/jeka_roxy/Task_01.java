@@ -1,5 +1,7 @@
 package ua.jeka_roxy;
 
+import java.util.Arrays;
+
 /**
  * Created by wojda on 10.02.2016.
  */
@@ -39,6 +41,11 @@ public class Task_01 {
         System.out.println("\na5: ");
         for (int b1 : a5 ) {
             System.out.print(b1 + "\t");
+        }
+        System.out.println("\nreverse output: ");
+        for (int i = a1.length; i > 0; i--) {
+            System.out.print(a1[i] + "\t");
+            //System.out.println(Arrays.toString(a1));
         }
     }
 }
