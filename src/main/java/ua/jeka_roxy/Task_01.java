@@ -1,5 +1,5 @@
 package ua.jeka_roxy;
-
+import java.util.Arrays;
 /**
  * Created by wojda on 10.02.2016.
  */
@@ -45,12 +45,13 @@ public class Task_01 {
             System.out.print(a1[i] + "\t");
         }
 
-        System.out.println(getMax(a2));
+        System.out.println(getMax(a2)); 
         System.out.println(getMin(a3));
+        Arrays.sort(a4);
+        System.out.println(Arrays.toString(a4));
     }
 
         static int getMax(int[] a2) {
-
             int maxValue = a2[0];
             System.out.println("\nmaximum value of a2 is: ");
             for (int i = 1; i < a2.length; i++) {
@@ -59,9 +60,8 @@ public class Task_01 {
             }
         }
         return maxValue;
-    }
+        }
         static int getMin(int[] a3) {
-
             int minValue = a3[0];
             System.out.println("minimum value of a3 is: ");
             for (int i = 1; i < a3.length; i++) {
@@ -70,7 +70,19 @@ public class Task_01 {
             }
         }
         return minValue;
-    }
+        }
+        public static void bubbleSort(int[] a4){
+            System.out.println("Bubble sort: ");
+            for(int i = a4.length - 1 ; i > 0 ; i--){
+                for(int j = 0 ; j < i ; j++){
+                    if( a4[j] > a4[j+1] ){
+                    int tmp = a4[j];
+                    a4[j] = a4[j+1];
+                    a4[j+1] = tmp;
+                    }
+                }
+            }
+        }
 }
 
 /*
