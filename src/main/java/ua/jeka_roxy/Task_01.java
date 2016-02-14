@@ -47,7 +47,7 @@ public class Task_01 {
 
         System.out.println(getMax(a2)); 
         System.out.println(getMin(a3));
-        Arrays.sort(a4);
+        bubbleSort(a4);
         System.out.println(Arrays.toString(a4));
     }
 
