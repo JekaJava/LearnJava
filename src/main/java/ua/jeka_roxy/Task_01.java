@@ -45,10 +45,12 @@ public class Task_01 {
             System.out.print(a1[i] + "\t");
         }
 
-        System.out.println(getMax(a2)); 
+        System.out.println(getMax(a2));
         System.out.println(getMin(a3));
-        Arrays.sort(a4);
+        bubbleSort(a4);
         System.out.println(Arrays.toString(a4));
+        bubbleSort2(a5);
+        System.out.println(Arrays.toString(a5));
     }
 
         static int getMax(int[] a2) {
@@ -71,14 +73,26 @@ public class Task_01 {
         }
         return minValue;
         }
-        public static void bubbleSort(int[] a4){
+        public static void bubbleSort(int[] a4){  // j < i; j++
             System.out.println("Bubble sort: ");
-            for(int i = a4.length - 1 ; i > 0 ; i--){
-                for(int j = 0 ; j < i ; j++){
-                    if( a4[j] > a4[j+1] ){
+            for(int i = a4.length - 1; i > 0; i--){ // второй цикл выполняет 9 кругов за один круг первого цикла
+                for(int j = 0; j < i; j++){  // c каждым кругом второго цикла, уменьшается количество элементом для проверки на 1
+                    if( a4[j] > a4[j+1] ){  // если элемент больше, чем его следующий элемент, то меняем местами
                     int tmp = a4[j];
-                    a4[j] = a4[j+1];
-                    a4[j+1] = tmp;
+                    a4[j] = a4[j+1]; // = -присвоение
+                    a4[j+1] = tmp;   // замена местами
+                    }
+                }
+            }
+        }
+        public static void bubbleSort2(int[] a5){
+            System.out.println("Bubble sort2: ");
+            for(int i = 0; i < a5.length; i++){
+                for(int j = 0; j < a5.length - i - 1; j++){  //Итерация происходит с j=0, До arr.length-1 и еще -i
+                    if( a5[j] < a5[j+1] ){  // i значит круги первого цикла
+                    int tm = a5[j];         // - i это значит - один круг первого цикла фор
+                    a5[j] = a5[j+1];
+                    a5[j+1] = tm;
                     }
                 }
             }
