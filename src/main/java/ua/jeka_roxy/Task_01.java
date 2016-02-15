@@ -20,7 +20,13 @@ public class Task_01 {
             a5[i] = (int) (Math.random() * 20);
         }
 
-        System.out.println("a1: ");
+        System.out.println(Arrays.toString(a1));
+        System.out.println(Arrays.toString(a2));
+        System.out.println(Arrays.toString(a3));
+        System.out.println(Arrays.toString(a4));
+        System.out.print(Arrays.toString(a5));
+
+        /*System.out.println("a1: ");
         for (int b1 : a1) {
             System.out.print(b1 + "\t");
         }
@@ -44,7 +50,7 @@ public class Task_01 {
         for (int i = a1.length - 1; i >= 0; i--) { // int i = a1.length - 1; - нужно начать отсчет с последнего элемента, так как количество элементов 0-9, то все образно "сдвигается на 1"
             System.out.print(a1[i] + "\t");
         }
-
+        */
         System.out.println(getMax(a2));
         System.out.println(getMin(a3));
         bubbleSort(a4);
