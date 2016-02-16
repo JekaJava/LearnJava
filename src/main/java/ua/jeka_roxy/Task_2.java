@@ -11,10 +11,9 @@ public class Task_2 {
         Scanner input = new Scanner(System.in);
         System.out.print("Fill an array with positive and negative numbers: ");
 
-        while (input.hasNextInt()){
-            int[] arr = input.nextInt[]();
-        }
-        n = input.nextInt();
+        int n = 20;
+        int[] arr = new int[n];
+
         for (int i = 0; i < arr.length; i++) {
             if (input.hasNextInt()) { // возвращает истинну если с потока ввода можно считать целое число
                 arr[i] = input.nextInt(); // считывает целое число с потока ввода и сохраняем в переменную/массив
