@@ -21,7 +21,7 @@ public class Task_2 {
             } else {
                 System.out.println("Invalid input");
             }
-            System.out.println(Arrays.toString(arr));
+            System.out.println(Arrays.toString(arr)); 
             /*while (input.hasNextInt()) {
                 if (arr[i] == 300) {
                     input.close();
