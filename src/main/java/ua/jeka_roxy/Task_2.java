@@ -11,26 +11,17 @@ public class Task_2 {
         Scanner input = new Scanner(System.in);
         System.out.print("Indicate size of an array: ");
 
-        int n = input.nextInt();
+        int n = input.nextInt(), digit;
         int[] arr = new int[n];
         System.out.print("Fill an array with positive and negative numbers: ");
-        for (int i = 0; i < arr.length; i++) {
-            if (input.hasNextInt()) { // возвращает истинну если с потока ввода можно считать целое число
-                arr[i] = input.nextInt(); // считывает целое число с потока ввода и сохраняем в переменную/массив
-
+        for (int i = 0; i < arr.length ; i++) {
+            digit = input.nextInt();
+            if ( digit != 300 ) {
+                arr[i] = digit;
             } else {
-                System.out.println("Invalid input");
+                System.out.println(Arrays.toString(inputArray(arr,i)));
             }
-
-            /*while (input.hasNextInt()) {
-                if (arr[i] == 300) {
-                    input.close();
-
-
-                }
-            }*/
         }
-        System.out.println(Arrays.toString(arr));
     }
 
     public static int[] inputArray(int[] arr, int i) {
