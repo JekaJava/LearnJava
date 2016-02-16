@@ -13,15 +13,15 @@ public class Task_2 {
 
         int n = input.nextInt();
         int[] arr = new int[n];
-
+        System.out.print("Fill an array with positive and negative numbers: ");
         for (int i = 0; i < arr.length; i++) {
             if (input.hasNextInt()) { // возвращает истинну если с потока ввода можно считать целое число
                 arr[i] = input.nextInt(); // считывает целое число с потока ввода и сохраняем в переменную/массив
-                System.out.print("Fill an array with positive and negative numbers: ");
+
             } else {
                 System.out.println("Invalid input");
             }
-            System.out.println(Arrays.toString(arr)); 
+
             /*while (input.hasNextInt()) {
                 if (arr[i] == 300) {
                     input.close();
@@ -30,6 +30,7 @@ public class Task_2 {
                 }
             }*/
         }
+        System.out.println(Arrays.toString(arr));
     }
 
     public static int[] inputArray(int[] arr, int i) {
