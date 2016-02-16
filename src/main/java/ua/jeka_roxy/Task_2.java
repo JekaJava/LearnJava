@@ -31,9 +31,9 @@ public class Task_2 {
         }
     }
 
-    public static int[] inputArray(int[] arr) {
+    public static int[] inputArray(int[] arr, int i) {
         Random random = new Random();
-        for (int i = 0; i < arr.length; i++) {
+        for ( ; i < arr.length; i++) {
             arr[i] = random.nextInt(100);
         }
 
