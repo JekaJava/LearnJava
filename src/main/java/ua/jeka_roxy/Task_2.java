@@ -11,7 +11,7 @@ public class Task_2 {
         Scanner input = new Scanner(System.in);
         System.out.print("Fill an array with positive and negative numbers: ");
 
-        int n = 20;
+        int n = input.nextInt();
         int[] arr = new int[n];
 
         for (int i = 0; i < arr.length; i++) {
