@@ -7,49 +7,46 @@ import java.util.Arrays;
  * Created by wojda on 08.02.2016.
  */
 public class Task_2 {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Fill an array with positive and negative ints: ");
+        System.out.print("Fill an array with positive and negative numbers: ");
 
-        int n = 20;
-        int[] arr = new int[20];
-
-        for (int i = 0; i < arr.length; i++) {
-        if (input.hasNextInt()) { // возвращает истинну если с потока ввода можно считать целое число
-            arr[i] = input.nextInt(); // считывает целое число с потока ввода и сохраняем в переменную/массив
-            System.out.println(Arrays.toString(arr));
-        } else {
-            System.out.println("Invalid input");
+        while (input.hasNextInt()){
+            int[] arr = input.nextInt[]();
         }
-        while (input.hasNextInt()) {
-            if (arr[i] == 300) {
-                input.close();
+        n = input.nextInt();
+        for (int i = 0; i < arr.length; i++) {
+            if (input.hasNextInt()) { // возвращает истинну если с потока ввода можно считать целое число
+                arr[i] = input.nextInt(); // считывает целое число с потока ввода и сохраняем в переменную/массив
+                System.out.println(Arrays.toString(arr));
+            } else {
+                System.out.println("Invalid input");
+            }
+            while (input.hasNextInt()) {
+                if (arr[i] == 300) {
+                    input.close();
 
 
-
-    }
-        public static int[] inputArray (int[] arr) {
-            Random random = new Random();
-            for (int i = 0; i < arr.length; i++) {
-                    arr[i] = random.nextInt(100);
                 }
             }
-            return arr;
+        }
+    }
+
+    public static int[] inputArray(int[] arr) {
+        Random random = new Random();
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = random.nextInt(100);
         }
 
-
-
-
-
-
-
+        return arr;
     }
 }
+
 /*
 создать массив чисел произвольной длины
 пользователь заполняет массив, при вводе числа "300" ввод чисел заканчиваеться и остальные клетки заполняются рандомными числами и не только > 0, но и < 0
 вывести массив ввиде ступенек
-для считывания данных воспользываться склассом Scanner
+для считывания данных воспользываться с классом Scanner
 
 Пример:
 ввод:
