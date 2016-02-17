@@ -11,15 +11,25 @@ public class Task_2 {
         Scanner input = new Scanner(System.in);
         System.out.print("Indicate size of an array: ");
 
-        int n = input.nextInt(), digit;
+        String word;
+        int n = input.nextInt(), j;
         int[] arr = new int[n];
+        int rows = n/2;
+
+        word = input.nextLine();
+        for (int i = n-1; i>0; i--) {
+            for (int k=0; k<i; k++) {
+                System.out.print(word + " ");
+            }
+        }
+
         System.out.print("Fill an array with positive and negative numbers: ");
         for (int i = 0; i < arr.length ; i++) {
-            digit = input.nextInt();
-            if ( digit != 300 ) {
-                arr[i] = digit;
-            } else {
-                System.out.println(Arrays.toString(inputArray(arr,i)));
+            j = input.nextInt();
+            if ( j != 300 ) { // если j не равно 300, то
+                arr[i] = j;   // продолжает ввод
+            } else { // новый метод надо сюда
+                System.out.println(Arrays.toString(inputArray(arr,i))); // если равно 300, то выводим массив рандомных чисел
             }
         }
     }
@@ -27,7 +37,7 @@ public class Task_2 {
     public static int[] inputArray(int[] arr, int i) {
         Random random = new Random();
         for ( ; i < arr.length; i++) {
-            arr[i] = random.nextInt(100);
+            arr[i] = (int) (random.nextInt(100) * Math.pow((-1),random.nextInt(3)));
         }
 
         return arr;
