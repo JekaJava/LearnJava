@@ -14,24 +14,29 @@ public class Task_2 {
         int n = input.nextInt(), j;
         int[] arr = new int[n];
         System.out.print("Fill an array with positive and negative numbers: ");
-        
-        for (int i = 0; i < arr.length ; i++) {
+        int i = 0;
+        for ( ; i < arr.length ; i++) {
             j = input.nextInt();
             if ( j != 300 ) { // если j не равно 300, то
                 arr[i] = j;   // продолжает ввод
             } else { // новый метод надо сюда
-                System.out.println(Arrays.toString(inputArray(arr,i))); // если равно 300, то выводим массив рандомных чисел
+              break;   // если равно 300, то выводим массив рандомных чисел
             }
         }
+        inputArray(arr,i);
     }
 
-    public static int[] inputArray(int[] arr, int i) {
+    public static void inputArray(int[] arr, int i) {
         Random random = new Random();
         for ( ; i < arr.length; i++) {
             arr[i] = (int) (random.nextInt(100) * Math.pow((-1),random.nextInt(3)));
         }
+        String word = "";
+        for (int j = 0; j < arr.length ; j++) {
+            System.out.format(word + " " + "%2d%n",arr[j]);
+            word += " ";
+        }
 
-        return arr;
     }
 }
 
