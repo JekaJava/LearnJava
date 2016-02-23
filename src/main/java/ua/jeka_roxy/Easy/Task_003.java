@@ -2,7 +2,7 @@ package ua.jeka_roxy.Easy;
 
 import java.util.Random;
 import java.util.Scanner;
-import java.util.Arrays;
+
 /**
  * Created by wojda on 08.02.2016.
  */
@@ -19,8 +19,8 @@ public class Task_003 {
             j = input.nextInt();
             if ( j != 300 ) { // если j не равно 300, то
                 arr[i] = j;   // продолжает ввод
-            } else { // новый метод надо сюда
-              break;   // если равно 300, то выводим массив рандомных чисел
+            } else { 
+              break;   // если равно 300, то выход из цикла
             }
         }
         inputArray(arr,i);
@@ -32,9 +32,9 @@ public class Task_003 {
             arr[i] = (int) (random.nextInt(100) * Math.pow((-1),random.nextInt(3)));
         }
         String word = "";
-        for (int j = 0; j < arr.length ; j++) {
-            System.out.format(word + " " + "%2d%n",arr[j]);
-            word += " ";
+        for (int anArr : arr) {
+            System.out.format(word + " " + "%2d%n", anArr); // %2d%n - выделяет две клетки для 2 decimals
+            word += " "; // word = word + " "
         }
 
     }
