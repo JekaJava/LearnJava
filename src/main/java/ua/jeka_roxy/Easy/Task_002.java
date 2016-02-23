@@ -1,9 +1,9 @@
-package ua.jeka_roxy;
+package ua.jeka_roxy.Easy;
 import java.util.Arrays;
 /**
  * Created by wojda on 10.02.2016.
  */
-public class Task_01 {
+public class Task_002 {
     public static void main(String[] args) {
         int n = 10;
         int[] a1 = new int[n];

@@ -1,4 +1,4 @@
-package ua.jeka_roxy;
+package ua.jeka_roxy.Easy;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -6,7 +6,7 @@ import java.util.Arrays;
 /**
  * Created by wojda on 08.02.2016.
  */
-public class Task_2 {
+public class Task_003 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Indicate size of an array: ");

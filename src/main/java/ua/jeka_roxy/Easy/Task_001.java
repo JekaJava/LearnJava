@@ -1,4 +1,4 @@
-package ua.jeka_roxy;
+package ua.jeka_roxy.Easy;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.Random;
 /**
  * Created by wojda on 07.02.2016.
  */
-public class Task_1 {
+public class Task_001 {
     public static void main(String[] args) throws IOException {
         int rowSize, columnSize;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
