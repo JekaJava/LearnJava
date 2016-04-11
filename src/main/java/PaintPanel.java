@@ -23,10 +23,33 @@ class PaintPanel extends JPanel {
 
     @Override
     protected void paintComponent(Graphics g) {
-        // Always call the superclass method first.
-        super.paintComponent(g);
-        g.drawOval(3,3,getWidth()-7,getHeight()-7);
-        //cделать круг другого цвета и круги друг в друге
+        super.paintComponent(g); // Always call the superclass method first.
+
+        int width = getWidth();
+        int height = getHeight();
+        int x = 400;
+        int y = 400;
+        /*int Center = width/7;
+        int largeDiameter = width;
+        int smallDiameter = width/2;*/
+
+
+        g.setColor(Color.RED);
+        g.drawOval(x,y,getWidth(),getHeight());
+
+        /*
+        g.setColor(Color.ORANGE);
+        g.drawOval(0,0,getWidth()/7,getHeight()/7);
+
+        g.setColor(Color.YELLOW);
+        g.drawOval(0,0,getWidth()/6,getHeight()/6);
+        */
+
+
+       /* for (int i = 0; i < 7; i++) {
+            g.drawOval(height-5, width-5, 50+(i*10),100);
+            g.setColor(Color.ORANGE);
+        }*/
     }
 }
 
